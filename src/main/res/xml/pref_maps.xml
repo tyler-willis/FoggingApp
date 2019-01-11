@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="maps_rotation"
+        android:summary="When enabled, the map will rotate to follow your current direction. When disabled, the map always faces north."
+        android:title="Enable Rotation"/>
+
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="maps_events_button"
+        android:summary="Show or hide Events button"
+        android:title="Enable Events Button"/>
+
+</PreferenceScreen>

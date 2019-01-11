@@ -1,0 +1,57 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Rotation -->
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="point_rotation"
+        android:title="Enable Rotation" />
+
+    <!-- Drop Frequency -->
+    <EditTextPreference
+        android:defaultValue="1"
+        android:inputType="number"
+        android:key="point_drop_frequency"
+        android:title="Drop Frequency (Per second)"
+        android:summary="How many seconds between point drops" />
+
+    <!-- Size -->
+    <ListPreference
+        android:defaultValue="0"
+        android:entries="@array/pref_point_size"
+        android:entryValues="@array/pref_point_size_values"
+        android:key="point_size"
+        android:negativeButtonText="@null"
+        android:positiveButtonText="@null"
+        android:title="Size" />
+
+    <!-- Icon -->
+    <ListPreference
+        android:defaultValue="0"
+        android:entries="@array/pref_point_icon"
+        android:entryValues="@array/pref_point_icon_values"
+        android:key="point_icon"
+        android:negativeButtonText="@null"
+        android:positiveButtonText="@null"
+        android:title="Icon" />
+
+    <!-- Color (Spray ON) -->
+    <ListPreference
+        android:defaultValue="1"
+        android:entries="@array/pref_point_color_on"
+        android:entryValues="@array/pref_point_color_on_values"
+        android:key="point_color_on"
+        android:negativeButtonText="@null"
+        android:positiveButtonText="@null"
+        android:title="Color while spray is ON" />
+
+    <!-- Color (Spray OFF) -->
+    <ListPreference
+        android:defaultValue="1"
+        android:entries="@array/pref_point_color_off"
+        android:entryValues="@array/pref_point_color_off_values"
+        android:key="point_color_off"
+        android:negativeButtonText="@null"
+        android:positiveButtonText="@null"
+        android:title="Color while spray is OFF" />
+
+</PreferenceScreen>

@@ -1,0 +1,30 @@
+<preference-headers xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- These settings headers are only used on tablets. -->
+
+    <header
+        android:fragment="com.example.ttwil.mapsprototype1.SettingsActivity$SwathFragment"
+        android:icon="@drawable/ic_swath"
+        android:title="@string/pref_swath" />
+
+    <header
+        android:fragment="com.example.ttwil.mapsprototype1.SettingsActivity$PointFragment"
+        android:icon="@drawable/ic_point"
+        android:title="@string/pref_point" />
+
+    <header
+        android:fragment="com.example.ttwil.mapsprototype1.SettingsActivity$RouteFragment"
+        android:icon="@drawable/ic_route"
+        android:title="@string/pref_route" />
+
+    <header
+        android:fragment="com.example.ttwil.mapsprototype1.SettingsActivity$MapSettingsFragment"
+        android:icon="@drawable/ic_map"
+        android:title="@string/pref_map" />
+
+    <header
+        android:fragment="com.example.ttwil.mapsprototype1.SettingsActivity$GPSFragment"
+        android:icon="@drawable/ic_gps"
+        android:title="GPS" />
+
+</preference-headers>

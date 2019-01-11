@@ -1,0 +1,35 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="swath_on_off"
+        android:summary="@string/pref_description_swath"
+        android:title="@string/pref_title_swath" />
+
+    <ListPreference
+        android:defaultValue="0"
+        android:entries="@array/pref_swath_color"
+        android:entryValues="@array/pref_swath_color_values"
+        android:key="swath_color_list"
+        android:negativeButtonText="@null"
+        android:positiveButtonText="@null"
+        android:title="Color" />
+
+    <ListPreference
+        android:defaultValue="1"
+        android:entries="@array/pref_swath_opacity"
+        android:entryValues="@array/pref_swath_opacity_values"
+        android:key="swath_opacity_list"
+        android:negativeButtonText="@null"
+        android:positiveButtonText="@null"
+        android:title="Opacity" />
+
+    <EditTextPreference
+        android:defaultValue="150"
+        android:inputType="number"
+        android:key="swath_size"
+        android:title="Size"
+        android:summary="Swath diameter in feet"
+        />
+
+</PreferenceScreen>

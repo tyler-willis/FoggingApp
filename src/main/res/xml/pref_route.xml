@@ -1,0 +1,18 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="route_on_off"
+        android:summary="Turn predetermined routes on or off"
+        android:title="Enable Routes"/>
+
+    <ListPreference
+        android:defaultValue="1"
+        android:entries="@array/pref_route_opacity"
+        android:entryValues="@array/pref_route_opacity_values"
+        android:key="route_opacity_list"
+        android:negativeButtonText="@null"
+        android:positiveButtonText="@null"
+        android:title="Opacity" />S
+
+</PreferenceScreen>
