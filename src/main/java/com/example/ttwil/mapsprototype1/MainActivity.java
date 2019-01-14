@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void init() {
-        Button btnMap = (Button) findViewById(R.id.btnMap);
+        Button btnMap = findViewById(R.id.btnMap);
         btnMap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -59,5 +59,10 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, "You can't make map requests", Toast.LENGTH_SHORT).show();
         }
         return false;
+    }
+
+    public void downloadMapTiles() {
+        Log.d(TAG, "downloadMapTiles: Downloading map tiles");
+        // DOWNLOAD MAP TILES
     }
 }

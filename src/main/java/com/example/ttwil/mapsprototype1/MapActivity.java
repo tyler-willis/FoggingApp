@@ -53,6 +53,7 @@ import com.google.android.gms.maps.model.CircleOptions;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.maps.model.TileOverlayOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 
@@ -122,11 +123,7 @@ public class MapActivity extends AppCompatActivity {
         onOffSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked) {
-                    isSpraying = true;
-                } else {
-                    isSpraying = false;
-                }
+                isSpraying = isChecked;
             }
 
         });
@@ -214,13 +211,15 @@ public class MapActivity extends AppCompatActivity {
 
                     try {
                         Log.d(TAG, "onMapReady: Setting my location to true");
+                        mMap.setMapType(GoogleMap.MAP_TYPE_NONE);
+                        mMap.addTileOverlay(new TileOverlayOptions().tileProvider(new CustomMapTileProvider(getResources().getAssets())));
+
                         mMap.setMyLocationEnabled(true);
                         mMap.getUiSettings().setMyLocationButtonEnabled(false);
                         mMap.getUiSettings().setZoomControlsEnabled(true);
 
                     } catch (SecurityException e) {
                         Log.e(TAG, "onMapReady: Failed to get location" + e.getMessage());
-                        return;
                     }
                 }
             }
@@ -307,8 +306,8 @@ public class MapActivity extends AppCompatActivity {
         switch(requestCode) {
             case LOCATION_PERMISSION_REQUEST_CODE:{
                 if (grantResults.length > 0) {
-                    for (int i = 0; i < grantResults.length; i++) {
-                        if (grantResults[i] != PackageManager.PERMISSION_GRANTED) {
+                    for (int grantResult : grantResults) {
+                        if (grantResult != PackageManager.PERMISSION_GRANTED) {
                             mLocationPermissionsGranted = false;
                             Log.d(TAG, "onRequestPermissionsResult: permission failed");
                             return;
@@ -409,7 +408,7 @@ public class MapActivity extends AppCompatActivity {
 
         // ROUTE
         routeIsOn = sharedPreferences.getBoolean("route_on_off", false);
-        routeOpacity = Integer.parseInt(sharedPreferences.getString("route_opacity_list", "15"));
+        routeOpacity = Integer.parseInt(Objects.requireNonNull(sharedPreferences.getString("route_opacity_list", "15")));
 
         // MAP
         mapEventButtonEnabled = sharedPreferences.getBoolean("maps_events_button", true);
