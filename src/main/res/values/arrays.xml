@@ -106,4 +106,89 @@
         <item>West Richland Golf Course</item>
     </string-array>
 
+    <!-- SESSION -->
+    <string-array name="session_wind_direction">
+        <item>Direction</item>
+        <item>N</item>
+        <item>NE</item>
+        <item>E</item>
+        <item>SE</item>
+        <item>S</item>
+        <item>SW</item>
+        <item>W</item>
+        <item>NW</item>
+    </string-array>
+
+    <string-array name="session_wind_speed">
+        <item>Speed (mph)</item>
+        <item>&lt;1</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>&gt;10</item>
+    </string-array>
+
+    <string-array name="session_map_areas">
+        <item>MB1 - Mabton 1</item>
+        <item>MB2 - Mabton 2</item>
+        <item>ML - Morgan Lake</item>
+        <item>BP - Byron Ponds</item>
+        <item>GSL - Grandview Sewage Lagoons</item>
+        <item>GV1 - Grandview 1</item>
+        <item>GV2 - Grandview 2</item>
+        <item>GV3 - Grandview 3</item>
+        <item>GV4 - Grandview 4</item>
+        <item>PR1 - Prosser 1</item>
+        <item>PR2 - Prosser 2</item>
+        <item>PR3 - Prosser 3</item>
+        <item>PR4 - Prosser 4</item>
+        <item>PR5 - Prosser 5</item>
+        <item>PR6 - Prosser 6</item>
+        <item>PR7 - Prosser 7</item>
+        <item>BC1 - Benton City 1</item>
+        <item>BC2 - Benton City 2</item>
+        <item>BC3 - Benton City 3</item>
+        <item>BC4 - Benton City 4</item>
+        <item>BC5 - Benton City 5</item>
+        <item>LC1 - Lewis and Clark 1</item>
+        <item>WR1 - West Richland 1</item>
+        <item>WR2 - West Richland 2</item>
+        <item>WR3 - West Richland 3</item>
+        <item>WR4 - West Richland 4</item>
+        <item>B1 - Barker 1</item>
+        <item>B2 - Barker 2</item>
+        <item>B3 - Barker 3</item>
+        <item>RD1 - Richland 1</item>
+        <item>RD2 - Richland 2</item>
+        <item>RD3 - Richland 3</item>
+        <item>RD4 - Richland 4</item>
+        <item>KN1 - Kennewick 1</item>
+        <item>KN2 - Kennewick 2</item>
+        <item>KN3 - Kennewick 3</item>
+        <item>KN4 - Kennewick 4</item>
+        <item>KN5 - Kennewick 5</item>
+        <item>FN1 - Finley 1</item>
+        <item>FN2 - Finley 2</item>
+        <item>FN3 - Finley 3</item>
+        <item>A-HOVR - </item>
+        <item>A-BRSH - Brushpile</item>
+        <item>A-CLVR - Clover Island</item>
+        <item>A-CLPK - Columbia Park</item>
+        <item>A-BATE - Bateman Island</item>
+        <item>A-DLTE - East Delta</item>
+        <item>A-DLTW - West Delta</item>
+        <item>A-CLPT - Columbia Point</item>
+        <item>A-ACME - Acme</item>
+        <item>A-DUPR - Duportail</item>
+        <item>A-HOWD - Howard Amon Park</item>
+        <item>A-LSLG - Leslie Groves Park</item>
+    </string-array>
+
 </resources>

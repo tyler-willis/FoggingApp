@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="productNames">
+        <item>DeltaGard</item>
+        <item>Anvil 10+10</item>
+        <item>Fyfanon EW</item>
+    </string-array>
+
+    <string-array name="productEPA">
+        <item>432–1534</item>
+        <item>1021–1688–8329</item>
+        <item>279–3622</item>
+    </string-array>
+
+    <string-array name="productConcentration">
+        <item>2%</item>
+        <item>10% (10%)</item>
+        <item>40.9%</item>
+    </string-array>
+
+    <string-array name="productDilution">
+        <item>YES (1:2)</item>
+        <item>NO</item>
+        <item>NO</item>
+    </string-array>
+
+    <string-array name="productFlowRate">
+        <item>12.18 oz/min @ 10mph</item>
+        <item>3.8 oz/min @ 10mph</item>
+        <item>9.45 oz/min @ 10mph</item>
+    </string-array>
+
+    <string-array name="productTargetRate">
+        <item>2.01 fl oz/acre</item>
+        <item>0.62 fl oz/acre</item>
+        <item>1.56 fl oz/acre</item>
+    </string-array>
+</resources>

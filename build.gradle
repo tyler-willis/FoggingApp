@@ -4,7 +4,7 @@ android {
     compileSdkVersion 28
     defaultConfig {
         applicationId "com.example.ttwil.mapsprototype1"
-        minSdkVersion 16
+        minSdkVersion 26
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
@@ -30,6 +30,12 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
-    implementation 'com.google.android.gms:play-services-maps:16.0.0'
+    implementation 'com.google.android.gms:play-services-maps:16.1.0'
     implementation 'com.google.android.gms:play-services-location:16.0.0'
+
+    implementation 'pl.pawelkleczkowski.customgauge:CustomGauge:1.0.3'
+
+    implementation 'com.google.maps.android:android-maps-utils:0.5+'
+
+    implementation 'com.github.zcweng:switch-button:0.0.3@aar'
 }

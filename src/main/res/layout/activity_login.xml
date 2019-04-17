@@ -7,113 +7,331 @@
     tools:context=".LoginActivity">
 
     <TextView
-        android:id="@+id/date"
+        android:id="@+id/timeText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
         android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:hint="Select Date"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginTop="32dp"
+        android:background="@drawable/rect"
+        android:gravity="center"
+        android:onClick="showTimePickerDialog"
+        android:padding="4dp"
+        android:text="TextView"
+        android:textSize="32sp"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/productInfoTable"
+        android:layout_marginLeft="8dp" />
 
-    <EditText
-        android:id="@+id/editText2"
+    <TextView
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="64dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:ems="10"
-        android:hint="Name"
-        android:inputType="textPersonName"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:text="Time Leaving the Compound:"
+        android:textSize="32sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/editText3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:ems="10"
-        android:hint="License Number"
-        android:inputType="textPersonName"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+        app:layout_constraintTop_toBottomOf="@+id/productInfoTable"
+        android:layout_marginLeft="16dp" />
 
     <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
+        android:id="@+id/pesticideOptions"
+        android:layout_width="300dp"
+        android:layout_height="42dp"
         android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:background="@color/common_google_signin_btn_text_light_focused"
-        android:entries="@array/login_truck_number"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText3" />
+        android:layout_marginTop="32dp"
+        android:background="@drawable/rect"
+        android:entries="@array/productNames"
+        android:padding="4dp"
+        app:layout_constraintStart_toEndOf="@+id/textView7"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        android:layout_marginLeft="8dp" />
 
-    <Spinner
-        android:id="@+id/spinner2"
-        android:layout_width="150dp"
-        android:layout_height="26dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:background="@color/common_google_signin_btn_text_light_focused"
-        android:entries="@array/login_products"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner" />
-
-    <Spinner
-        android:id="@+id/spinner3"
+    <TextView
+        android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:entries="@array/login_route"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:text="Pesticide Used:"
+        android:textSize="32sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner2" />
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        android:layout_marginLeft="16dp" />
+
+    <Spinner
+        android:id="@+id/applicatorOptions"
+        android:layout_width="500dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/rect"
+        android:entries="@array/applicator"
+        android:padding="4dp"
+        app:layout_constraintStart_toEndOf="@+id/textView6"
+        app:layout_constraintTop_toBottomOf="@+id/truckText"
+        android:layout_marginLeft="8dp" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:text="Applicator:"
+        android:textSize="32sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/truckText"
+        android:layout_marginLeft="16dp" />
+
+    <Spinner
+        android:id="@+id/deviceIDOptions"
+        android:layout_width="100dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/rect"
+        android:entries="@array/deviceIDs"
+        android:padding="4dp"
+        app:layout_constraintStart_toEndOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/txtDateOfApplication"
+        android:layout_marginLeft="8dp" />
 
     <Button
-        android:id="@+id/login_button"
+        android:id="@+id/submitButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        android:text="submit"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/dateText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:text="Login"
-        android:textAllCaps="true"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner3" />
+        android:layout_marginTop="16dp"
+        android:background="@drawable/rect"
+        android:gravity="center"
+        android:onClick="showDatePickerDialog"
+        android:padding="4dp"
+        android:text="TextView"
+        android:textSize="32sp"
+        app:layout_constraintStart_toEndOf="@+id/txtDateOfApplication"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="8dp" />
 
+    <TextView
+        android:id="@+id/txtDateOfApplication"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="Date of Application:"
+        android:textSize="32sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="16dp" />
+
+    <TextView
+        android:id="@+id/truckText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:text="Truck ID:"
+        android:textSize="32sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtDateOfApplication"
+        android:layout_marginLeft="16dp" />
+
+    <Spinner
+        android:id="@+id/truckOptions"
+        style="@style/Widget.AppCompat.Spinner.Underlined"
+        android:layout_width="100dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/rect"
+        android:entries="@array/truckNumbers"
+        android:padding="4dp"
+        app:layout_constraintStart_toEndOf="@+id/truckText"
+        app:layout_constraintTop_toBottomOf="@+id/txtDateOfApplication"
+        android:layout_marginLeft="8dp" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:text="Data Recording Device ID:"
+        android:textSize="32sp"
+        app:layout_constraintStart_toEndOf="@+id/truckOptions"
+        app:layout_constraintTop_toBottomOf="@+id/txtDateOfApplication"
+        android:layout_marginLeft="8dp" />
+
+    <TableLayout
+        android:id="@+id/productInfoTable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:background="@color/lightGrey"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7"
+        android:layout_marginLeft="16dp">
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:background="@color/veryLightGrey"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="Product\nName"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:background="@color/veryLightGrey"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="EPA Reg. #"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:background="@color/veryLightGrey"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="Conc.\nApplied\nA.I. (PBO)"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:background="@color/veryLightGrey"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="Dilute\nMixture?"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:background="@color/veryLightGrey"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="Pesticide Flow Rate"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:background="@color/veryLightGrey"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="Reference Only:\nSmartFlow Target Rate"
+                android:textSize="20sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tableProductName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:background="@color/veryLightGrey"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="STAND IN"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tableEPA"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:background="@color/veryLightGrey"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="STAND IN"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tableConcentration"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:background="@color/veryLightGrey"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="STAND IN"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tableDilution"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:background="@color/veryLightGrey"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="STAND IN"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tableFlowRate"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:background="@color/veryLightGrey"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="STAND IN"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tableTargetRate"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:background="@color/veryLightGrey"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="STAND IN"
+                android:textSize="20sp" />
+
+        </TableRow>
+
+    </TableLayout>
 </android.support.constraint.ConstraintLayout>

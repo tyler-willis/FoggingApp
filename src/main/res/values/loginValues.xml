@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="truckNumbers">
+        <item>2</item>
+        <item>12</item>
+        <item>13</item>
+        <item>19</item>
+        <item>24</item>
+    </string-array>
+
+    <string-array name="deviceIDs">
+        <item>SGTA_01</item>
+        <item>SGTA_02</item>
+        <item>SGTA_03</item>
+        <item>SGTA_04</item>
+        <item>SGTA_05</item>
+        <item>SGTA_06</item>
+        <item>SGTA_07</item>
+        <item>SGTA_08</item>
+        <item>x1</item>
+        <item>x2</item>
+        <item>x3</item>
+    </string-array>
+
+    <string-array name="applicator">
+        <item>Willis, Tyler, 88036</item>
+        <item>LePage, Clive, 12345</item>
+        <item>Shoemaker, Kevin, 00001</item>
+        <item>Anvil, Billy, 14201</item>
+    </string-array>
+</resources>

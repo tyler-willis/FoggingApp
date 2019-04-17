@@ -1,35 +1,142 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v4.widget.DrawerLayout xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true">
 
     <FrameLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <fragment
-            xmlns:android="http://schemas.android.com/apk/res/android"
+        <fragment xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/map"
-            tools:context=".MapsActivity"
-            android:name="com.google.android.gms.maps.SupportMapFragment"/>
+            tools:context=".MapsActivity" />
 
-        <Switch
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="false"
+            app:srcCompat="@color/darkGrey"
+
+            />
+
+        <ImageButton
+            android:id="@+id/btnNewSession"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="bottom|start"
+            android:layout_marginBottom="120dp"
+            android:background="@null"
+            android:contentDescription="TODO"
+            android:scaleType="fitCenter"
+            android:tint="@color/common_google_signin_btn_text_dark_default"
+            android:visibility="visible"
+            app:srcCompat="@drawable/ic_new_session" />
+
+        <ImageButton
+            android:id="@+id/btnEndSession"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="bottom|start"
+            android:layout_marginBottom="120dp"
+            android:background="@null"
+            android:contentDescription="TODO"
+            android:scaleType="fitCenter"
+            android:tint="@color/common_google_signin_btn_text_dark_default"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/ic_square" />
+
+        <com.suke.widget.SwitchButton
             android:id="@+id/onOffSwitch"
-            android:layout_width="wrap_content"
+            android:layout_width="130dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginLeft="-16dp"
+            android:rotation="90"
+            app:sb_background="@color/mutedRed"
+            app:sb_uncheck_color="@color/mutedRed"
+            app:sb_uncheckcircle_color="@color/mutedRed"
+            app:sb_checked_color="@color/mutedGreen"
+            app:sb_checkline_color="@color/mutedGreen"
+            app:sb_uncheckcircle_width="0dp"
+            />
+
+        <ImageButton
+            android:id="@+id/btnEvent"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="bottom|start"
+            android:background="@null"
+            android:contentDescription="TODO"
+            android:scaleType="fitCenter"
+            android:tint="@color/common_google_signin_btn_text_dark_pressed"
+            app:srcCompat="@drawable/ic_event" />
+
+        <pl.pawelkleczkowski.customgauge.CustomGauge
+            android:layout_height="100dp"
+            android:layout_width="100dp"
+            android:id="@+id/GPSGauge"
+            android:layout_gravity="bottom"
+            android:padding="20dp"
+            android:layout_marginBottom="240dp"
+            app:gaugeEndValue="100"
+            app:gaugeStartValue="0"
+            app:gaugePointEndColor="@color/darkRed"
+            app:gaugePointStartColor="@color/darkRed"
+            app:gaugeStartAngle="150"
+            app:gaugeStrokeCap="ROUND"
+            app:gaugeStrokeColor="@color/gaugeGrey"
+            app:gaugeStrokeWidth="12dp"
+            app:gaugeSweepAngle="240"
+            />
+
+        <TextView
+            android:id="@+id/onLabel"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:padding="40dp"
-            android:scaleX="2"
-            android:scaleY="2"
-            android:showText="true" />
+            android:gravity="center"
+            android:layout_marginTop="24dp"
+            android:text="ON"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/offLabel"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="94dp"
+            android:text="OFF"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/gaugeText"
+            android:layout_width="36dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="32dp"
+            android:layout_marginBottom="280dp"
+            android:gravity="center"
+            android:text="0%"
+            android:textColor="@color/common_google_signin_btn_text_dark_default" />
+
+        <ImageButton
+            android:id="@+id/drawerButton"
+            android:layout_width="24dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            app:srcCompat="@drawable/ic_drawer_button"
+            android:background="@drawable/drawer_button_background"
+            android:contentDescription="Drawer Button" />
 
     </FrameLayout>
 

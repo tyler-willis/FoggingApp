@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorPrimary">#C38133</color>
+    <color name="colorPrimaryDark">#000</color>
+    <color name="colorAccent">#276972</color>
+    <color name="ActionBarMain">#ed8103</color>
+    <color name="ActionBarAccent">#C38133</color>
+    <color name="ActionBarLine">#200000</color>
+    <color name="colorShoemakerBlue">#2f2fff</color>
+    <color name="darkGrey">#353535</color>
+    <color name="lightGrey">#888</color>
+    <color name="gaugeGrey">#AAA</color>
+    <color name="veryLightGrey">#DDD</color>
+    <color name="veryVeryLightGrey">#EEE</color>
+    <color name="lightGreen">#3D5</color>
+    <color name="darkRed">#F00</color>
+    <color name="yellow">#FF0</color>
+    <color name="darkOrange">#E41</color>
+    <color name="mutedRed">#C00</color>
+    <color name="white">#FFF</color>
+    <color name="mutedGreen">#51d367</color>
 </resources>

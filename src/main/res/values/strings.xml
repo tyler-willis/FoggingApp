@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Maps Prototype 1</string>
+    <string name="app_name">MMA - Adulticiding</string>
 
     <string name="google_maps_api_key">AIzaSyBRMz7T3-Kw071EFQWejHUla25ww1V7dx4</string>
     <string name="settings">Settings</string>
@@ -96,4 +96,9 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="smartflow_end_rate">Time Stop</string>
+    <string name="time_stop">Notes</string>
 </resources>

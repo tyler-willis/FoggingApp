@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".SessionActivity"
+    android:focusable="true">
+
+    <TextView
+        android:id="@+id/foggingNotesCharCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="0/250"
+        app:layout_constraintEnd_toEndOf="@+id/foggingAreaNotesText"
+        app:layout_constraintTop_toBottomOf="@+id/foggingAreaNotesText" />
+
+    <TextView
+        android:id="@+id/txtFoggingArea2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        android:text="Notes:"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toTopOf="@+id/foggingAreaNotesText"
+        app:layout_constraintStart_toStartOf="@+id/foggingAreaNotesText" />
+
+    <EditText
+        android:id="@+id/foggingAreaNotesText"
+        android:layout_width="625dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:background="@drawable/rect"
+        android:ems="10"
+        android:inputType="none"
+        android:textSize="18sp"
+        android:gravity="top"
+        android:padding="6dp"
+        app:layout_constraintStart_toEndOf="@+id/foggingAreaInputText"
+        app:layout_constraintTop_toTopOf="@+id/foggingAreaInputText" />
+
+    <EditText
+        android:id="@+id/smartFlowStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rect"
+        android:gravity="center"
+        android:inputType="numberDecimal"
+        android:padding="4dp"
+        android:text="0.0"
+        android:textSize="32sp"
+        app:layout_constraintStart_toEndOf="@+id/txtTime9"
+        app:layout_constraintTop_toBottomOf="@+id/txtTime8" />
+
+    <TextView
+        android:id="@+id/txtTime9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="Start:"
+        android:textSize="32sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTime8" />
+
+    <TextView
+        android:id="@+id/txtTime8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="SmartFlow Readings"
+        android:textColor="@color/colorShoemakerBlue"
+        android:textSize="32sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTime7" />
+
+    <TextView
+        android:id="@+id/txtTime5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="Time"
+        android:textColor="@color/colorShoemakerBlue"
+        android:textSize="32sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTemp" />
+
+    <TextView
+        android:id="@+id/timeStart3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rect"
+        android:gravity="center"
+        android:onClick="showTimePickerDialog"
+        android:padding="4dp"
+        android:text="TextView"
+        android:textSize="32sp"
+        app:layout_constraintStart_toEndOf="@+id/txtTime7"
+        app:layout_constraintTop_toBottomOf="@+id/txtTime" />
+
+    <TextView
+        android:id="@+id/txtTime7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="Start:"
+        android:textSize="32sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTime" />
+
+    <TextView
+        android:id="@+id/txtTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="Time"
+        android:textColor="@color/colorShoemakerBlue"
+        android:textSize="32sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTemp" />
+
+    <TextView
+        android:id="@+id/tempWarning"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="30dp"
+        android:text="Please input a valid temperature."
+        android:textColor="@android:color/holo_red_dark"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/tempInputText"
+        app:layout_constraintTop_toBottomOf="@+id/windSpeed" />
+
+    <TextView
+        android:id="@+id/txtTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="Temperature:"
+        android:textSize="32sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtWind" />
+
+    <Spinner
+        android:id="@+id/windSpeed"
+        android:layout_width="120dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/rect"
+        android:entries="@array/session_wind_speed"
+        android:padding="4dp"
+        app:layout_constraintStart_toEndOf="@+id/windDirection"
+        app:layout_constraintTop_toBottomOf="@+id/foggingAreaInputText" />
+
+    <Spinner
+        android:id="@+id/windDirection"
+        android:layout_width="90dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/rect"
+        android:entries="@array/session_wind_direction"
+        android:padding="4dp"
+        app:layout_constraintStart_toEndOf="@+id/txtWind"
+        app:layout_constraintTop_toBottomOf="@+id/foggingAreaInputText" />
+
+    <TextView
+        android:id="@+id/txtWind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="Wind:"
+        android:textSize="32sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/foggingAreaInputText" />
+
+    <TextView
+        android:id="@+id/txtFoggingArea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="Fogging Area Completed:"
+        android:textSize="32sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtMapArea" />
+
+    <Spinner
+        android:id="@+id/mapAreaSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="42dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/rect"
+        android:entries="@array/session_map_areas"
+        android:padding="4dp"
+        app:layout_constraintStart_toEndOf="@+id/txtMapArea"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtMapArea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="Map Area:"
+        android:textSize="32sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/foggingAreaInputText"
+        android:layout_width="625dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rect"
+        android:ems="10"
+        android:inputType="none"
+        android:textSize="18sp"
+        android:padding="6dp"
+        android:gravity="top"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtFoggingArea" />
+
+    <TextView
+        android:id="@+id/foggingAreaCharCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="0/250"
+        app:layout_constraintEnd_toEndOf="@+id/foggingAreaInputText"
+        app:layout_constraintTop_toBottomOf="@+id/foggingAreaInputText" />
+
+    <TextView
+        android:id="@+id/windSpeedWarning"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="18dp"
+        android:text="Wind speed is outside accepted parameters. Consult a supervisor."
+        android:textColor="@android:color/holo_red_dark"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/windSpeed"
+        app:layout_constraintTop_toBottomOf="@+id/foggingAreaInputText" />
+
+    <EditText
+        android:id="@+id/tempInputText"
+        android:layout_width="110dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/rect"
+        android:ems="10"
+        android:hint="Farenheit"
+        android:inputType="number"
+        android:padding="10dp"
+        app:layout_constraintStart_toEndOf="@+id/txtTemp"
+        app:layout_constraintTop_toBottomOf="@+id/txtWind" />
+
+    <Button
+        android:id="@+id/btnStartSession"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="START SESSION"
+        android:textSize="42sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</android.support.constraint.ConstraintLayout>
